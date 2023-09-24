@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 ul {
@@ -24,7 +24,7 @@ ul {
     padding: 20px 0;
     font-size: 1.25rem;
     font-weight: bold;
-    background-image: url(images/background.jpg);
+    background-image: url(images/background_header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -55,11 +55,13 @@ p {
 }
 
 .avatar {
-    height: 300px;
+    height: 200px;
     text-align: center;
-    background-image: url(images/background1.png);
+    background-image: url(images/background_avatar.png);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 100%;
+    margin: auto;
 }
 
 .avatar img {
@@ -70,7 +72,7 @@ p {
     text-decoration: none;
     color: black;
     border: 2px solid black;
-    padding: 10px;
+    padding: 7px;
     border-radius: 5px;
     display: inline-block;
     transition: color 1s, border-color 1s;
