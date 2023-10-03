@@ -1,0 +1,48 @@
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+
+}
+.container {
+    max-width: 280px;
+    height: 200px;
+    margin: auto;
+    margin-top: 250px;
+    border: 3px solid rgb(170, 189, 198);
+    border-radius: 10px;
+    padding: 10px 50px;
+    background: rgb(226, 234, 238);
+    font-size: 18px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#log, #pass {
+    width: 100%;
+    padding: 4px 0px;
+}
+
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.btn {
+    display: block;
+    margin: auto;
+    width: 70%;
+    padding: 3px;
+    border: 2px solid rgb(91, 121, 137);
+    background-color: rgb(113, 150, 168);
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+}

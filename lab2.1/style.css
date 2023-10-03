@@ -1,0 +1,55 @@
+body {
+    background: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+.container {
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 20px;
+    border: 1px solid rgb(94, 145, 215);
+    border-radius: 7px;
+    padding: 20px 50px;
+    margin-bottom: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+input, textarea, select {
+    font-size: inherit;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+fieldset {
+    width: 380px;
+    margin-top: 10px;
+    border-width: 1px;
+    border-color: rgb(75, 71, 71);
+}
+
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.btn {
+    display: block;
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+    border: 2px solid rgb(140, 171, 213);
+    border-radius: 5px;
+    background-color: rgb(111, 183, 239);
+    color: rgb(255, 255, 255);
+}
