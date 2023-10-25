@@ -1,0 +1,407 @@
+@font-face {
+    font-family: "CodeNext"; 
+    src: url("fonts/CodeNext-Trial-SemiBold.ttf") ; 
+
+  } 
+
+  @font-face {
+    font-family: "CodeNext2"; 
+    src: url("fonts/CodeNext-Trial-Regular.ttf") ; 
+
+  } 
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: "CodeNext"; 
+}
+
+.d-flex {
+    display: flex;
+}
+
+.container {
+    padding: 0 50px;
+} 
+
+.common-title {
+    color: #0e3a4fde;
+    font-size: 50px;
+    text-align: center;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #003347ba;
+    border: 1px solid #003347ba;
+    border-radius: 10px;
+    padding: 15px 38px;
+    background-color: #6f84a986;
+}
+
+.btn a:hover {
+    color: #18336d;
+    border: 1px solid #18336d;
+}
+
+.card {
+    background-color: #49648a5f;
+}
+
+
+/* ADD FILES HEADER */
+
+.header-add .left-a {
+    align-items: center;
+    height: 15px;
+    background-color: #5A7092;
+    border-bottom: 5px solid #0b2c5a93;
+    padding: 40px;
+    margin: 0 -50px;
+}
+
+.header-add a {
+    text-decoration: none;
+    color: #cbd0e4;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.header-add a:hover {
+    color: #053447;
+}
+
+
+
+
+
+
+/* HEADER STYLES */
+.header {
+    background-color: #7190af;
+    background-image: url(images/header.jpg);
+    min-height: 835px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header .main-page {
+    flex-direction: column;
+}
+
+.header .header-nav {
+    justify-content: space-between;
+    align-items: center;
+    height: 15px;
+    background-color: rgba(26, 35, 41, 0.288);
+    padding: 40px;
+    margin: 0 -50px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #cbd0e4;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header a:hover {
+    color: #053447;
+}
+
+.header .left-a a {
+    font-size: 30px;
+}
+
+.header .main-menu li {
+    display: inline;
+    padding-right: 25px;
+}
+
+.header .main-menu li:last-child {
+    padding-right: 0;
+}
+
+.header .main-title {
+    height: 700px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 110px;
+}
+
+.header .main-title p {
+    color: rgba(255, 255, 255, 0.886);
+    text-transform: uppercase;
+}
+
+.header .main-title .p-1 {
+    font-size: 140px;
+    letter-spacing: 40px;
+    font-family: "CodeNext2";
+}
+
+.header .main-title .p-2 {
+    font-size: 40px;
+    font-family: "CodeNext2"; 
+}
+
+
+
+
+/* MAIN STYLES */
+
+main {
+    background-color: #657797;
+    flex-grow: 1;
+    /* height: 6000px; */
+}
+
+/* ABOUT */
+.about {
+    margin-bottom: 65px;
+    margin-top: 80px;
+    justify-content: center;
+}
+
+.about .main-text p {
+    color: #bfd4edd3;
+}
+
+.about-card {
+    border: 2px solid rgba(0, 49, 67, 30%);
+    border-radius: 10px;
+    width: 1200px;
+    padding: 30px 50px;
+}
+
+.about .text {
+    flex-direction: column;
+    text-align: center;
+    padding-right: 75px;
+    padding-left: 25px;
+}
+
+.about .text .title p {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.about .main-text p {
+    font-size: 20px;
+    margin-bottom: 55px;
+}
+
+.about .about-img img {
+    height: 500px;
+    /* margin-top: 50px; */
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+
+
+
+/* NATURE */
+.nature {
+    flex-direction: column;
+}
+
+.nature .cards {
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nature .cards:last-child {
+    margin-bottom: 50px;
+}
+
+.nature .text {
+    margin-bottom: 40px;
+}
+
+.nature .card {
+    border: 2px solid rgba(0, 49, 67, 30%);
+    border-radius: 7px;
+    padding: 20px;
+    margin: 0 20px 30px 20px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    height: 520px;
+    background-color: #49648a5f;
+}
+
+.nature .main-text p {
+    text-align: center;
+    color: #003347ba;
+    font-size: 20px;
+}
+
+.nature .card-title p {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.721);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.nature .card-text p {
+    font-size: 16px;
+    color: #bfd4ede4;
+    text-align: center;
+}
+
+.nature .cards img {
+    height: 300px;
+    border: 2px solid rgba(216, 233, 239, 0.3);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.nature .btn {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.nature .btn a {
+    padding: 15px 100px;
+    font-size: 18px;
+}
+
+
+
+
+/* TOUR */
+.tour {
+    margin-bottom: 80px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tour .title {
+    margin-bottom: 40px;
+}
+
+.tour .cards {
+    flex-direction: column;
+}
+
+.tour .card {
+    background-color: #49648a5f;
+    border: 3px solid rgba(0, 49, 67, 30%);
+    border-radius: 7px;
+    padding: 30px;
+    margin-bottom: 30px;
+    max-width: 1200px;
+}
+
+.tour .card img {
+    height: 300px;
+    border: 2px solid rgba(216, 233, 239, 0.5);
+    border-radius: 5px;
+}
+
+.tour .card .info {
+    flex-direction: column;
+    padding-left: 40px;
+    padding-right: 20px;
+}
+
+.tour .card-title p {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.721);
+    text-transform: uppercase;
+}
+
+.tour .card-text p {
+    font-size: 18px;
+    color: #bfd4ede4;
+    margin-bottom: 30px;
+}
+
+.tour .btn a {
+    padding: 10px 50px;
+    font-size: 18px;
+}
+
+
+
+/* FOOTER */
+.footer { 
+    background-color: #5A7092;
+    padding: 1.25rem 0;
+    border-top: 2px solid #0b2c5a93;
+    width: 100%;
+    color: #0c2f45;
+}
+
+.footer p{
+    font-size: 14px;
+}
+
+
+
+
+
+/* ADD FILES */
+
+.add-nature .title p {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.add-tours .title {
+    margin: 0 auto;
+    padding: 50px 0 30px 0;
+    width: 1000px;
+}
+
+.add-tours .title p {
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.721);
+    text-transform: uppercase;
+}
+
+.add-tours .title span {
+    font-size: 32px;
+}
+
+.add-tours .main-text {
+    color: #bfd4ede4;
+    font-size: 20px;
+    width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.add-tours .main-text:last-child {
+    padding-bottom: 100px;
+}
+
+.add-tours figure {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.add-tours figure img {
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 1100px;
+}
+
+.add-tours figcaption {
+    color: rgba(204, 204, 204, 0.571);
+}

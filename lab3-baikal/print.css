@@ -1,0 +1,23 @@
+.header-nav, .header-add, .about-img, .btn, .footer {
+    display: none;
+}
+
+
+.main-page .main-title {
+    height: 200px;
+    margin-top: 200px;
+    /* padding: 0; */
+}
+
+.about {
+    margin-top: -370px;
+}
+
+.nature .card {
+    max-width: 700px;
+    min-height: 485px;
+}
+
+.tour .card {
+    flex-direction: column;
+}
