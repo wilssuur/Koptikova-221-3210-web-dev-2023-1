@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="short icon" href="images/calc.png">
+    <script src="main.js" defer></script>
+    <title>Калькулятор</title>
+</head>
+<body>
+    <main>
+        <div class="calc-container d-flex">
+            <div class="screen d-flex">
+                <span></span>
+            </div>
+            <div class="buttons d-flex">
+
+                <div class="left-side d-flex">
+
+                    <div class="top other">
+                        <button data-action="clear" class="key clear">C</button>
+                        <button data-action="show" class="key bracket">(</button>
+                        <button data-action="show" class="key bracket">)</button>
+                    </div>
+                    <div class="digits">
+                        <button data-action="show" class="key digit">7</button>
+                        <button data-action="show" class="key digit">8</button>
+                        <button data-action="show" class="key digit">9</button>
+                        <button data-action="show" class="key digit">4</button>
+                        <button data-action="show" class="key digit">5</button>
+                        <button data-action="show" class="key digit">6</button>
+                        <button data-action="show" class="key digit">1</button>
+                        <button data-action="show" class="key digit">2</button>
+                        <button data-action="show" class="key digit">3</button>
+                        <button data-action="show" class="key digit zero">0</button>
+                        <button data-action="show" class="key digit">.</button>
+                    </div>
+
+                </div>
+
+                <div class="right-side other d-flex">
+                    <button data-action="show" class="key operation">/</button>
+                    <button data-action="show" class="key operation">*</button>
+                    <button data-action="show" class="key operation">-</button>
+                    <button data-action="show" class="key operation">+</button>
+                    <button data-action="calc" class="key result">=</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
