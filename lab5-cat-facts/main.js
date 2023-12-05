@@ -95,6 +95,7 @@ function renderPaginationElement(info) {
 }
 
 function downloadData(page = 1) {
+    document.querySelector('.search-prompts').textContent = '';
     let factsList = document.querySelector('.facts-list');
     let url = new URL(factsList.dataset.url);
     let perPage = document.querySelector('.per-page-btn').value;
