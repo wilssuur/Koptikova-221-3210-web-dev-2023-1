@@ -1,0 +1,32 @@
+.navbar {
+    background-color: #182032;
+}
+.color-0d2252 {
+    color: #0d2252;
+}
+
+.section1 {
+    background: linear-gradient(70deg, #0F2654, #22868C);
+}
+
+.section2 {
+    background: linear-gradient(to top, #309a9f, #b6f2f54b);
+}
+
+.section3 {
+    background: linear-gradient(0deg, #122d70, #309a9f);
+}
+
+.section4 {
+    background: linear-gradient(to top, #122d70, #122d70);
+}
+
+footer {
+    background-color: #182032;
+}
+
+@media (max-width: 576px) {
+    .tree img {
+        width: 300px;
+    }
+}
