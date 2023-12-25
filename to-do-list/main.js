@@ -10,10 +10,10 @@ function generateTask(task) {
     taskElement.id = task.id;
 
     let list;
-    if (task.status == '1') {
+    if (task.status == 'to-do') {
         list = document.getElementById('to-do-list');
 
-    } else if (task.status == '2') {
+    } else if (task.status == 'done') {
         list = document.getElementById('done-list');
     }
     list.append(taskElement);
@@ -36,7 +36,7 @@ async function createTask() {
     let url = new URL(tasksApi);
     let response = await fetch(url, {
         method: 'POST',
-        body: JSON.stringify(task),
+        body: new FormData(form),
     });
 
     form.reset();
@@ -46,29 +46,16 @@ async function createTask() {
 }
 
 async function LoadStorage() {
-    let key = 'api/tasks?api_key=50d2199a-42dc-447d-81ed-d68a443b697e';
-    let tasksApi = `http://tasks-api.std-900.ist.mospolytech.ru/${key}`;
+    let apiKey = 'api/tasks?api_key=50d2199a-42dc-447d-81ed-d68a443b697e';
+    let tasksApi = `http://tasks-api.std-900.ist.mospolytech.ru/${apiKey}`;
     let url = new URL(tasksApi);
 
     let response = await fetch(url);
-
-    console.log(response);
-    // let res = await response.json();
-    // console.log(res);
-
     let result = await response.json();
-    console.log(result);
-    for (key in result) {
-        console.log(key);
-        generateTask(result[key]);
-        console.log(result[key]);
-    }
 
-    // if (response.ok) {
-    //     result = await response.json();
-    // } else {
-    //     result = "Ошибка HTTP: " + response.status;
-    // }
+    for (var key in result) {
+        generateTask(result.tasks[key]);
+    }
 
 }
 
