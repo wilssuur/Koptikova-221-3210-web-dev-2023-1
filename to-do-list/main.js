@@ -37,7 +37,6 @@ async function createTask() {
     let response = await fetch(url, {
         method: 'POST',
         body: JSON.stringify(task),
-        mode: "no-cors",
     });
 
     form.reset();
@@ -58,8 +57,11 @@ async function LoadStorage() {
     // console.log(res);
 
     let result = await response.json();
+    console.log(result);
     for (key in result) {
+        console.log(key);
         generateTask(result[key]);
+        console.log(result[key]);
     }
 
     // if (response.ok) {
