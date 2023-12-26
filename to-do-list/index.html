@@ -43,7 +43,7 @@
                             </ul>
                         </div>
                         <div class="card-footer">
-                            <span class="badge bg-primary tasks-counter">0</span> <span class="text-muted">задач</span>
+                            <span class="badge bg-primary tasks-counter-to-do">0</span> <span class="text-muted">задач</span>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                             </ul>
                         </div>
                         <div class="card-footer">
-                            <span class="badge bg-primary tasks-counter">0</span> <span class="text-muted">задач</span>
+                            <span class="badge bg-primary tasks-counter-done">0</span> <span class="text-muted">задач</span>
                         </div>
                     </div>
                 </div>
@@ -86,13 +86,13 @@
                 <a class="move-btn move-to-do" title="Переместить в колонку To Do">
                     <i class="fas fa-arrow-left"></i>
                 </a>
-                <a title="Посмотреть">
+                <a title="Посмотреть" data-bs-toggle="modal" data-bs-target="#showTaskModal">
                     <i class="fas fa-eye"></i>
                 </a>
                 <a title="Редактировать" data-bs-toggle="modal" data-bs-target="#editTaskModal">
                     <i class="fas fa-edit"></i>
                 </a>
-                <a title="Удалить" data-bs-toggle="modal" data-bs-target="#confirmDelete">
+                <a title="Удалить" data-bs-toggle="modal" data-bs-target="#deleteTaskModal">
                     <i class="fas fa-trash-o"></i>
                 </a>
                 <a class="move-btn move-done" title="Переместить в колонку Done">
@@ -119,18 +119,18 @@
                 <div class="modal-body">
                     <form id="form">
                         <div class="mb-3">
-                            <label for="taskName" class="form-label">Название задачи</label>
-                            <input type="text" id="taskName" name="name" class="form-control">
+                            <label for="createTaskName" class="form-label">Название задачи</label>
+                            <input type="text" id="createTaskName" name="name" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label for="taskDescription" class="form-label">Описание задачи</label>
-                            <textarea id="taskDescription" name="desc" class="form-control"></textarea>
+                            <label for="createTaskDescription" class="form-label">Описание задачи</label>
+                            <textarea id="createTaskDescription" name="desc" class="form-control"></textarea>
                         </div>
                         <div>
-                            <label for="taskStatus" class="form-label">Колонка</label>
-                            <select id="taskStatus" name="status" class="form-control">
-                                <option value="1">To Do</option>
-                                <option value="2">Done</option>
+                            <label for="createTaskStatus" class="form-label">Колонка</label>
+                            <select id="createTaskStatus" name="status" class="form-control">
+                                <option value="to-do">To Do</option>
+                                <option value="done">Done</option>
                             </select>
                         </div>
 
@@ -138,13 +138,101 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="createTask">Создать</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        id="createTask">Создать</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="main.js"></script>
+    <!-- Edit Task -->
+    <div class="modal fade" tabindex="-1" id="editTaskModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Редактирование задачи</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm">
+                        <input type="hidden" name="taskId" id="editTaskId">
+                        <div class="mb-3">
+                            <label for="editTaskName" class="form-label">Название задачи</label>
+                            <input type="text" id="editTaskName" name="name" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editTaskDescription" class="form-label">Описание задачи</label>
+                            <textarea id="editTaskDescription" name="desc" class="form-control"></textarea>
+                        </div>
+                        <div>
+                            <label for="editTaskStatus" class="form-label">Колонка</label>
+                            <select id="editTaskStatus" name="status" class="form-control">
+                                <option value="to-do">To Do</option>
+                                <option value="done">Done</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        id="editTask">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Task -->
+    <div class="modal fade" tabindex="-1" id="deleteTaskModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Удалить задачу</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Вы уверены, что хотите удалить эту задачу?</p>
+                    <form id="deleteForm">
+                        <input type="hidden" id="taskID">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                        id="deleteTask">Удалить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Show Task -->
+    <div class="modal fade" tabindex="-1" id="showTaskModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Просмотр задачи</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="taskId">
+                    <div class="mb-3 row">
+                        <div class="col-4">Название задачи:</div>
+                        <div id="showTaskName" name="name" class="col-8"></div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <div class="col-4">Описание задачи:</div>
+                        <div id="showTaskDesc" name="desc" class="col-8"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="showTask">Ок</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
