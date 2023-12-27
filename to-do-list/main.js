@@ -92,6 +92,7 @@ async function generateTask(task) {
         let apyKey = 'api_key=50d2199a-42dc-447d-81ed-d68a443b697e';
         let tasksApi = `${host}/${taskID}?${apyKey}`;
         let url = new URL(tasksApi);
+        
         let response = await fetch(url);
         result = await response.json();
     }
@@ -183,7 +184,7 @@ async function deleteTask() {
     let tasksApi = `${host}/${taskID}?${apyKey}`;
     let url = new URL(tasksApi);
 
-    let response = await fetch(url, {
+    await fetch(url, {
         method: 'DELETE'
     });
 
