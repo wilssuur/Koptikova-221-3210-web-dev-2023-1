@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "NTSomic";
+    src: url("fonts/NTSomic/NTSomic-Medium.otf");
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "NTSomic";
+    src: url("fonts/NTSomic/NTSomic-Regular.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.navbar {
+    background-color: #9cafc5;
+    font-family: NTSomic;
+    font-weight: normal;
+    background-color: #335680;
+    background-color: #9CAFC5;
+    /* background-color: #7D8794; */
+}
+
+.section1 {
+    /* background: linear-gradient(to top, #bbafa9ac, #adbed2); */
+    background-color: #bec7d1;
+    /* background-color: #9cafc5; */
+    font-family: NTSomic;
+    font-weight: normal;
+    color: #102338;
+
+    background-color: #9CAFC5;
+    background-color: #C8D4E2;
+
+}
+
+.section2 {
+    /* background-color: #ccd8e8; */
+    background-color: #E5EDF7;
+    color: #102338;
+    background-color: #E8F3FF;
+    font-family: NTSomic;
+    font-weight: normal;
+    background-color: #C8D4E2;
+    background-color: #DCE5F1;
+}
+
+
+.section3 {
+    /* background: linear-gradient(to left, #c9cfd7, #EEF3F7); */
+    background-color: #c3c5c7;
+    font-family: NTSomic;
+    font-weight: normal;
+    background-color: #BFCFE2;
+    background-color: #C8D4E2;
+}
+
+.section4 {
+    background-color: #E8F3FF;
+    font-family: NTSomic;
+    font-weight: normal;
+}
+
+/* @media (max-width: 1200px) {
+    .img-mos img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .img-mos img {
+        width: 350px;
+    }
+} */
